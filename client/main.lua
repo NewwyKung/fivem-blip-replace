@@ -1,8 +1,7 @@
-local Setting = {
-    Replaces = {
-        ['blips_texturesheet_ng'] = 'assets/blips_texturesheet_ng.png'
-    }
-}
+local Debug = function(text)
+    if not Config.Debug then return end
+    print(text)
+end
 
 CreateThread(function()
     Wait(5000)
@@ -13,10 +12,10 @@ CreateThread(function()
     RequestStreamedTextureDict('replace_blip', false)
     while not HasStreamedTextureDictLoaded('replace_blip') do 
         Wait(100)
-        print('Loading Texture Dict...')
+        Debug('Loading Texture Dict...')
     end
     for name, _ in pairs(Setting.Replaces) do
         AddReplaceTexture('minimap', name, 'replace_blip', 'replace_' .. name)
     end
-    print('All minimap blip textures have been replaced.')
+    Debug('All minimap blip textures have been replaced.')
 end)
