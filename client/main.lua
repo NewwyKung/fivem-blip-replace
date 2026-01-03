@@ -1,5 +1,5 @@
 local Debug = function(text)
-    if not Config.Debug then return end
+    if not Setting.Debug then return end
     print(text)
 end
 

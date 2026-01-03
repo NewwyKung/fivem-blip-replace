@@ -1,4 +1,4 @@
-local Setting = {
+Setting = {
     Debug = true,
     Replaces = {
         ['blips_texturesheet_ng'] = 'assets/blips_texturesheet_ng.png',
