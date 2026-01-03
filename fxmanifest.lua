@@ -6,6 +6,7 @@ description ''
 lua54 'yes'
 
 client_scripts {
+    'config.lua',
     'client/main.lua',
 }
 
